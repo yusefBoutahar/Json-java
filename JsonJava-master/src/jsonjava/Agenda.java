@@ -1,4 +1,7 @@
 package jsonjava;
+
+import java.util.List;
+
  public class Agenda {
     private String firstName;
     private String lastName;
@@ -8,6 +11,24 @@ package jsonjava;
     private String state;
     private String postalCode;
     private PhoneNumbers[] phoneNumbers;
+    private List<String> phoneNumbers2;
+
+    
+    
+    
+    public Agenda(String firstName, String lastName, long age, String streetAdress, String city, String state,
+			String postalCode, List<String> phoneNumbers2) {
+		super();
+		this.firstName = firstName;
+		this.lastName = lastName;
+		this.age = age;
+		this.streetAdress = streetAdress;
+		this.city = city;
+		this.state = state;
+		this.postalCode = postalCode;
+		this.phoneNumbers2 = phoneNumbers2;
+	}
+
      public String getFirstName() {
         return firstName;
     }
@@ -33,6 +54,11 @@ package jsonjava;
     public PhoneNumbers[] getPhoneNumbers() {
         return phoneNumbers;
     }
+    
+    public List<String> getPhoneNumbers2() {
+        return phoneNumbers2;
+    }
+    
      public class PhoneNumbers {
         private long mobile;
         private long home;
